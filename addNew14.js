@@ -21,17 +21,19 @@ document.addEventListener("click", function (e) {
         let questionNumber = optionAnsewrUl.id.split(`_`)[1]
         console.log(questionNumber)
         newChildren_li.id = `optionAnsewr_${questionNumber}_li_${countOfChildren}`;
+        
 
         newChildren_inp.id = `optionAnsewr_${questionNumber}_radio_${countOfChildren}`;
         newChildren_inp.type = "radio";
         newChildren_inp.value = `${countOfChildren}`
         newChildren_inp.name = `Questions[${questionNumber}].RightAnswer`;
-        newChildren_inp.className = "form-check-input";
+        newChildren_inp.className = "radio_answer form-check-input";
+        newChildren_inp.style="height: 29px; width: 25px;"
 
 
         newChildren_lbl.id = `optionAnsewr_${questionNumber}_input_${countOfChildren}`;
         newChildren_lbl.for = newChildren_inp.id;
-        newChildren_lbl.className = "form-check-input w-50"; 
+        newChildren_lbl.className = "form-check-input w-75 h-50 mx-1"; 
         newChildren_lbl.name = `Questions[${questionNumber}].Answers[${countOfChildren}].text`;
         newChildren_lbl.required
 
@@ -43,10 +45,10 @@ document.addEventListener("click", function (e) {
         newChildren_inoutHID3.name = `Questions[${questionNumber}].Answers[${countOfChildren}].isexist`;
 
         newChildren_i.id = `optionAnsewr_${questionNumber}_i_${countOfChildren}`;
-        newChildren_i.textContent = "x";
-        newChildren_i.className = "bi bi-x x";
-        newChildren_i.style.cursor = "pointer";
-        newChildren_i.style.marginRight = "15px";
+       
+        newChildren_i.className = "fa-solid fa-x x";
+        newChildren_i.style= "cursor: pointer; font-size: 15px;";
+     
 
         optionAnsewrUl.appendChild(newChildren_li);
         newChildren_li.appendChild(newChildren_inp);
@@ -150,8 +152,8 @@ btn_newQuestionDiv.onclick = function () {
         <label  class="btn btn-primary mb-2 mt-2 addnewAnswer" style="padding:6px; font-size: 12px;">إضافة خيار جديد</label>
         <ul id="optionAnsewrUl_${numberOfQuestion}" class="optionAnsewrUl">
           
-        <li id="optionAnsewr_${numberOfQuestion}_li_0"><input id="optionAnsewr_${numberOfQuestion}_radio_0" type="radio"  name="Questions[${numberOfQuestion}].RightAnswer"  value="0" class="form-check-input"><input id="optionAnsewr_${numberOfQuestion}_lable_0" for="optionAnsewr_${numberOfQuestion}_radio_0" class="form-check-input w-50" name="Questions[${numberOfQuestion}].Answers[0].text" required></input><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].aID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].QuestionID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].isexist"/></li>
-        <li id="optionAnsewr_${numberOfQuestion}_li_1"><input id="optionAnsewr_${numberOfQuestion}_radio_1" type="radio"   name="Questions[${numberOfQuestion}].RightAnswer"  value="1" class="form-check-input"><input id="optionAnsewr_${numberOfQuestion}_lable_1" for="optionAnsewr_${numberOfQuestion}_radio_1" class="form-check-input w-50" name="Questions[${numberOfQuestion}].Answers[1].text" required></input><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].aID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].QuestionID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].isexist"/></li>
+        <li id="optionAnsewr_${numberOfQuestion}_li_0"><input id="optionAnsewr_${numberOfQuestion}_radio_0" type="radio"  name="Questions[${numberOfQuestion}].RightAnswer"  style="height: 29px; width: 25px;" value="0" class="form-check-input"><input id="optionAnsewr_${numberOfQuestion}_lable_0" for="optionAnsewr_${numberOfQuestion}_radio_0" class="form-check-input w-75 h-50 mx-1 " name="Questions[${numberOfQuestion}].Answers[0].text" required></input><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].aID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].QuestionID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[0].isexist"/></li>
+        <li id="optionAnsewr_${numberOfQuestion}_li_1"><input id="optionAnsewr_${numberOfQuestion}_radio_1" type="radio"   name="Questions[${numberOfQuestion}].RightAnswer"  style="height: 29px; width: 25px;" value="1" class="form-check-input"><input id="optionAnsewr_${numberOfQuestion}_lable_1" for="optionAnsewr_${numberOfQuestion}_radio_1" class="form-check-input w-75 h-50 mx-1 " name="Questions[${numberOfQuestion}].Answers[1].text" required></input><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].aID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].QuestionID" /><input type="hidden" name="Questions[${numberOfQuestion}].Answers[1].isexist"/></li>
 
         </ul>
       </div>
