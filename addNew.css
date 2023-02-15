@@ -1,0 +1,23 @@
+.formDive{
+    padding: 5px;
+}
+.optionAnsewrUl{
+    list-style: none;
+}
+.accordionMY{
+    max-height: 200px;
+    overflow: overlay;;
+   
+}
+.buttons{
+    text-align: end;
+}
+
+.deletQuestion{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px !important;
+    height: 10px !important;
+    margin: 5px;
+}

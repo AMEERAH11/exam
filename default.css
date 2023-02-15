@@ -1,0 +1,44 @@
+:root{
+    --background_content:#F1F1F1;
+    --background_NaveAndFooter:rgb(0 0 0);
+}
+
+html{
+    direction: rtl;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+    background-color:var(--background_content);
+    }
+body{
+    direction: rtl;
+    height: 100%;
+    width: 100%;
+    background-color:  #f1f1f1 !important;
+    
+    }
+    
+    header{
+        background-color: var(--background_NaveAndFooter);
+        height: 10vh;
+    }
+    .content{
+        background-color:var(--background_content);
+        min-height: 80vh;
+    }
+  
+    
+    footer{
+        background-color: var(--background_NaveAndFooter);
+        height: 10vh;
+    }
+    
+    .logo{
+        color: white !important;
+    }
+    .linkLogin a{
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+    }
