@@ -1,0 +1,12 @@
+.content2{
+    height:500px}
+.content3{
+    height: 100%;
+}
+.MyForm{
+    position: relative;
+}
+.myBtn{
+position: absolute;
+left: 15px;
+}
