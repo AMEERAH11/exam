@@ -1,0 +1,20 @@
+.optionAnsewrUl{
+    list-style: none;
+}
+.rightAnswer{
+    background-color:#81c78480;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.accordionMY{
+    max-height: 200px;
+    overflow: overlay;;
+   
+}
+.buttons{
+    text-align: end;
+}
+.myTableDiv{
+    overflow-x: auto;
+}
