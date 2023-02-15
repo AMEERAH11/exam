@@ -1,0 +1,9 @@
+
+.MyForm{
+    position: relative;
+}
+.myBtn{
+position: absolute;
+bottom: 0px;
+left: 15px;
+}
