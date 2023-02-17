@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="examShow.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -36,11 +40,11 @@
             <div class="dateDiv row col-md-6 col-12 justify-content-between"> 
                <div class="col-md-6 col-12">
                 <label for="startInput" class="form-label" >تاريخ البداية</label>
-                <input id="startInput"  class="form-control" placeholder="عنوان الإختبار" type="datetime-local" readonly>
+                <input id="startInput"  class="form-control" placeholder="عنوان الإختبار" type="date" readonly>
                </div>
                <div class="col-md-6 col-12">
                 <label for="endInput" class="form-label" >تاريخ النهاية</label>
-                <input id="endInput"  class="form-control" placeholder="عنوان الإختبار" type="datetime-local" readonly>
+                <input id="endInput"  class="form-control" placeholder="عنوان الإختبار" type="date" readonly>
                </div>
             </div>
             </div>
@@ -75,7 +79,7 @@
                             <label class="form-label col-10" for="questioninput_0"> السؤال</label>
                             
                             <input id="questioninput_0" class="questioninput form-control mb-2"  placeholder="السؤال" readonly>
-                            <div class=" "> <label class="form-label "> درجة السؤال</label><input class=" form-control" placeholder="الدرجة"  type="number" style="width:85px;"></div>
+                            <div class=" "> <label class="form-label "> درجة السؤال</label><input class=" form-control" placeholder="الدرجة"  type="number" style="width:85px;" readonly></div>
                             <input type="hidden"  name="Questions[0].qID"/>
                             <input type="hidden"  name="Questions[0].isexist"/>                     
                            <input type="hidden"  name="Questions[0].ExamID"/>
@@ -102,9 +106,10 @@
               <a class="btn btn-primary" href="index.html">رجوع</a>
             </div>
         </form>
-        <div class="content2 container border my-3 ">
+        <h4>المختبرين</h4>
+        <div class="container border my-3 ">
         <div class="myTableDiv">
-          <table class="table">
+          <table class="table" id="myTable">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -126,11 +131,124 @@
                 <td>@mdo</td>
                 <td>@mdo</td>
               </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
     <footer></footer>
+    <script>
+      $(document).ready(function () {
+          $('#myTable').DataTable();
+      });
+</script>
 </body>
 </html>
