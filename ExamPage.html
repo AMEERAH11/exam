@@ -308,11 +308,12 @@
                      div.innerHTML=` <div class="cardo2 row justify-content-center align-items-center" >
                <span class="text-dark"> للأسف إنتهت مدة الإختبار </span>
             </div>`
+                      alert("إنتهت مدة الإختبار")
                          
 content.appendChild(div);
                         setTimeout(function(){
                             button1.click();
-                        },1000)
+                        },0)
                        
                     }else{
                         s = 60;
