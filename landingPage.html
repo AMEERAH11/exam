@@ -53,13 +53,13 @@
       
     }
     .secDiv{
-        
+       
         width: 100%;
         height: 100%;
         
     }
     .DivLandig{
-      border: 2px solid greenyellow;
+      
       max-height: 100%;
     }
     .DivLandig img{
@@ -68,7 +68,7 @@
         height: 100%;
     }
 .one{
-  border: 2px solid black;
+ 
   height: 100%;
   width: 100%;
 }
@@ -76,7 +76,7 @@
       background-color: var(--third-color) !important;
     }
     .two{
-border: 2px solid rgb(0, 255, 166);
+
 height: 100%;
 width: 100%;
 position: relative;
@@ -93,6 +93,7 @@ position: relative;
 }
 #info1{
   height: 100%;
+  align-content: center;
  
 }
 .titel{
@@ -103,7 +104,7 @@ position: relative;
     footer{
         height: 10vh;
         background-color: var(--frist-color);
-        
+        color: white;
     }
 
     @media only screen and (max-width: 990px) {
@@ -146,6 +147,15 @@ position: relative;
     display: block;
   }
   }
+  @media only screen and (max-width: 650px) {
+    .divFOOTER{
+    margin-right: 3PX;
+  }
+  .by{
+    font-size: 15px;
+  }
+  }
+ 
 </style>
 </style>
 </head>
@@ -172,7 +182,7 @@ position: relative;
               </button>
               <div class="myBurger2 offcanvas offcanvas-end text" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">لإنشاء إختبار</h5>
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: white;">لإنشاء إختبار</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -216,7 +226,7 @@ position: relative;
                       </div>
               </div>
       
-              <div class="DivLandig col-6 col-md-6 ">
+              <div class="DivLandig  col-6 col-md-6 ">
                 <img src="onlineExam3.jpg">
             </div>
 
@@ -231,7 +241,11 @@ position: relative;
 
     </section>
 <footer>
-
+<div class="divFOOTER row justify-content-between align-items-center w-100 h-100 px-lg-4 ">
+  <span class="col-6">للتواصل</span>
+  <span class="col-6 by" style="text-align: left;">By Ameerah Alsharif</span>
+ 
+</div>
 </footer>
 </body>
 </html>
